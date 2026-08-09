@@ -123,9 +123,15 @@ header.site-header {
 }
 
 .logo-img {
-  height: 128px;
+  height: 96px;
   width: auto;
   display: block;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 64px;
+  }
 }
 
 nav.primary-nav ul {
