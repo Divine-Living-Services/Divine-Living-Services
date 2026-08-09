@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Referrals | Divine Living Services — Melbourne NDIS Provider</title>
+<meta name="description" content="Refer yourself, a family member, or a client to Divine Living Services. NDIS Support Coordination, Community Access, Daily Living and Nursing across Melbourne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+<script src="accessibility.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/logo.png" alt="Divine Living Services — home" class="logo-img">
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="for-referrers.html">For Referrers</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <span class="hero-eyebrow">Contact &amp; Referrals</span>
+    <h1>Let's Start the Conversation</h1>
+    <p>Whether you're referring yourself, a family member, or a client, we make the process simple and pressure-free. Each form below is broken into short steps so it never feels overwhelming.</p>
+  </div>
+
+  <section class="block" aria-label="Referral forms">
+    <div class="container">
+      <div class="referral-panels">
+
+        <!-- SELF / FAMILY REFERRAL -->
+        <div class="referral-panel family" id="self-referral" tabindex="-1">
+          <p class="path-label">Participants &amp; Families</p>
+          <h2>Referring Yourself or a Family Member?</h2>
+          <p>We know reaching out can feel like a big step. Our team will get back to you within 2 business days to have a relaxed, no-obligation chat about your needs.</p>
+
+          <div class="wizard-progress-label" id="sf-progress-label">Step 1 of 3: Participant details</div>
+          <div class="wizard-progress" aria-hidden="true">
+            <div class="wp-step active" data-wp="1"></div>
+            <div class="wp-step" data-wp="2"></div>
+            <div class="wp-step" data-wp="3"></div>
+          </div>
+
+          <div class="wizard-error-summary" id="sf-error-summary" role="alert"></div>
+
+          <form aria-labelledby="self-referral-form-heading" method="POST" action="https://formspree.io/f/mwlevzgo" id="sf-form" data-wizard novalidate>
+            <h3 id="self-referral-form-heading" style="position:absolute;left:-9999px;">Self or family referral form</h3>
+
+            <!-- STEP 1 -->
+            <div class="wizard-step active" data-step="1">
+              <fieldset>
+                <legend>Participant details</legend>
+
+                <div class="form-field">
+                  <label for="sf-name">Full name <span class="required-tag">Required</span></label>
+                  <input type="text" id="sf-name" name="full_name" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-dob">Date of birth <span class="required-tag">Required</span></label>
+                  <input type="date" id="sf-dob" name="dob" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-ndis">NDIS number</label>
+                  <input type="text" id="sf-ndis" name="ndis_number">
+                  <span class="hint">Optional at this stage — leave blank if you're not sure.</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-contact-method">Preferred contact method <span class="required-tag">Required</span></label>
+                  <select id="sf-contact-method" name="contact_method" required>
+                    <option value="">Select an option</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-phone">Phone number <span class="required-tag">Required</span></label>
+                  <input type="tel" id="sf-phone" name="phone" autocomplete="tel" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-email">Email address</label>
+                  <input type="email" id="sf-email" name="email" autocomplete="email">
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-suburb">Residential suburb <span class="required-tag">Required</span></label>
+                  <input type="text" id="sf-suburb" name="suburb" autocomplete="address-level2" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-interpreter">Preferred language / interpreter required?</label>
+                  <input type="text" id="sf-interpreter" name="interpreter" placeholder="e.g. Vietnamese interpreter needed, or 'No'">
+                </div>
+              </fieldset>
+
+              <div class="wizard-nav">
+                <span></span>
+                <button type="button" class="wizard-btn primary" data-next>Continue</button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="wizard-step" data-step="2">
+              <fieldset>
+                <legend>About your support needs</legend>
+
+                <div class="form-field">
+                  <label id="sf-services-label">Which services are you interested in? <span class="required-tag">Required</span></label>
+                  <div role="group" aria-labelledby="sf-services-label">
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="sf-svc-1" name="services" value="support_coordination">
+                      <label for="sf-svc-1">Support Coordination</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="sf-svc-2" name="services" value="community_access">
+                      <label for="sf-svc-2">Community Access</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="sf-svc-3" name="services" value="daily_living">
+                      <label for="sf-svc-3">Daily Living</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="sf-svc-4" name="services" value="nursing">
+                      <label for="sf-svc-4">Nursing</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-describe">Briefly describe what support you're looking for</label>
+                  <textarea id="sf-describe" name="support_description"></textarea>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-plan-status">Do you have a current NDIS plan? <span class="required-tag">Required</span></label>
+                  <select id="sf-plan-status" name="plan_status" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="applying">Applying</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-plan-mgmt">Plan management type</label>
+                  <select id="sf-plan-mgmt" name="plan_management">
+                    <option value="">Select an option</option>
+                    <option value="self">Self-Managed</option>
+                    <option value="plan">Plan-Managed</option>
+                    <option value="ndia">NDIA-Managed</option>
+                    <option value="not_sure">Not Sure</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="sf-start-date">Preferred start date / urgency</label>
+                  <input type="text" id="sf-start-date" name="start_date" placeholder="e.g. As soon as possible, or a specific date">
+                </div>
+              </fieldset>
+
+              <div class="wizard-nav">
+                <button type="button" class="wizard-btn" data-back>Back</button>
+                <button type="button" class="wizard-btn primary" data-next>Continue</button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="wizard-step" data-step="3">
+              <fieldset>
+                <legend>Emergency contact</legend>
+                <div class="form-field">
+                  <label for="sf-em-name">Emergency contact name</label>
+                  <input type="text" id="sf-em-name" name="emergency_contact_name">
+                </div>
+                <div class="form-field">
+                  <label for="sf-em-phone">Emergency contact number</label>
+                  <input type="tel" id="sf-em-phone" name="emergency_contact_phone">
+                </div>
+              </fieldset>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="sf-consent-contact" name="consent_contact" required>
+                <label for="sf-consent-contact">I consent to being contacted by Divine Living Services about this referral. <span class="required-tag">Required</span></label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="sf-consent-privacy" name="consent_privacy" required>
+                <label for="sf-consent-privacy">I have read and accept the <a href="privacy.html">Privacy Policy</a>. <span class="required-tag">Required</span></label>
+              </div>
+
+              <div class="wizard-nav">
+                <button type="button" class="wizard-btn" data-back>Back</button>
+                <button type="submit" class="wizard-btn primary">Submit Referral</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="wizard-success" id="sf-success">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h3>Thanks — your referral has been received.</h3>
+            <p>Our team will get back to you within 2 business days.</p>
+          </div>
+        </div>
+
+        <!-- PROFESSIONAL REFERRAL -->
+        <div class="referral-panel pro" id="professional-referral" tabindex="-1">
+          <p class="path-label">Support Coordinators &amp; Plan Managers</p>
+          <h2>Professional Referral</h2>
+          <p>Send us a referral directly and our intake team will respond promptly with next steps and availability.</p>
+
+          <div class="wizard-progress-label" id="pr-progress-label">Step 1 of 3: Referrer details</div>
+          <div class="wizard-progress" aria-hidden="true">
+            <div class="wp-step active" data-wp="1"></div>
+            <div class="wp-step" data-wp="2"></div>
+            <div class="wp-step" data-wp="3"></div>
+          </div>
+
+          <div class="wizard-error-summary" id="pr-error-summary" role="alert"></div>
+
+          <form aria-labelledby="pro-referral-form-heading" method="POST" action="https://formspree.io/f/mnpajreb" id="pr-form" data-wizard novalidate>
+            <h3 id="pro-referral-form-heading" style="position:absolute;left:-9999px;">Professional referral form</h3>
+
+            <!-- STEP 1 -->
+            <div class="wizard-step active" data-step="1">
+              <fieldset>
+                <legend>Referrer details</legend>
+
+                <div class="form-field">
+                  <label for="pr-referrer-name">Referrer full name <span class="required-tag">Required</span></label>
+                  <input type="text" id="pr-referrer-name" name="referrer_name" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-org">Organisation name <span class="required-tag">Required</span></label>
+                  <input type="text" id="pr-org" name="organisation" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-role">Role <span class="required-tag">Required</span></label>
+                  <select id="pr-role" name="referrer_role" required>
+                    <option value="">Select an option</option>
+                    <option value="support_coordinator">Support Coordinator</option>
+                    <option value="plan_manager">Plan Manager</option>
+                    <option value="lac">Local Area Coordinator (LAC)</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-phone">Phone number <span class="required-tag">Required</span></label>
+                  <input type="tel" id="pr-phone" name="referrer_phone" autocomplete="tel" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-email">Email address <span class="required-tag">Required</span></label>
+                  <input type="email" id="pr-email" name="referrer_email" autocomplete="email" required>
+                </div>
+              </fieldset>
+
+              <div class="wizard-nav">
+                <span></span>
+                <button type="button" class="wizard-btn primary" data-next>Continue</button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="wizard-step" data-step="2">
+              <fieldset>
+                <legend>Participant details</legend>
+
+                <div class="form-field">
+                  <label for="pr-p-name">Participant full name <span class="required-tag">Required</span></label>
+                  <input type="text" id="pr-p-name" name="participant_name" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-p-dob">Date of birth <span class="required-tag">Required</span></label>
+                  <input type="date" id="pr-p-dob" name="participant_dob" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-p-ndis">NDIS number <span class="required-tag">Required</span></label>
+                  <input type="text" id="pr-p-ndis" name="participant_ndis_number" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-plan-start">Plan start date</label>
+                  <input type="date" id="pr-plan-start" name="plan_start_date">
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-plan-review">Plan review date</label>
+                  <input type="date" id="pr-plan-review" name="plan_review_date">
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-plan-mgmt">Plan management type <span class="required-tag">Required</span></label>
+                  <select id="pr-plan-mgmt" name="plan_management" required>
+                    <option value="">Select an option</option>
+                    <option value="self">Self-Managed</option>
+                    <option value="plan">Plan-Managed</option>
+                    <option value="ndia">NDIA-Managed</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-diagnosis">Primary disability / relevant diagnosis</label>
+                  <textarea id="pr-diagnosis" name="diagnosis"></textarea>
+                  <span class="hint">Optional — only include details relevant to service delivery.</span>
+                </div>
+              </fieldset>
+
+              <div class="wizard-nav">
+                <button type="button" class="wizard-btn" data-back>Back</button>
+                <button type="button" class="wizard-btn primary" data-next>Continue</button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="wizard-step" data-step="3">
+              <fieldset>
+                <legend>Referral details</legend>
+
+                <div class="form-field">
+                  <label id="pr-services-label">Services requested <span class="required-tag">Required</span></label>
+                  <div role="group" aria-labelledby="pr-services-label">
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="pr-svc-1" name="services" value="support_coordination">
+                      <label for="pr-svc-1">Support Coordination</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="pr-svc-2" name="services" value="community_access">
+                      <label for="pr-svc-2">Community Access</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="pr-svc-3" name="services" value="daily_living">
+                      <label for="pr-svc-3">Daily Living</label>
+                    </div>
+                    <div class="checkbox-row">
+                      <input type="checkbox" id="pr-svc-4" name="services" value="nursing">
+                      <label for="pr-svc-4">Nursing</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-funding">Funding availability confirmed? <span class="required-tag">Required</span></label>
+                  <select id="pr-funding" name="funding_confirmed" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-documents">Relevant support documents</label>
+                  <input type="file" id="pr-documents" name="documents" multiple>
+                  <span class="hint">e.g. NDIS Plan, referral letter, care plan. Accepted formats: PDF, Word, JPG.</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-urgency">Urgency level <span class="required-tag">Required</span></label>
+                  <select id="pr-urgency" name="urgency" required>
+                    <option value="">Select an option</option>
+                    <option value="standard">Standard</option>
+                    <option value="priority">Priority</option>
+                    <option value="urgent">Urgent</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="pr-notes">Additional notes / special considerations</label>
+                  <textarea id="pr-notes" name="notes"></textarea>
+                </div>
+              </fieldset>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="pr-consent" name="consent_referral" required>
+                <label for="pr-consent">I confirm the participant consents to this referral being made. <span class="required-tag">Required</span></label>
+              </div>
+
+              <div class="wizard-nav">
+                <button type="button" class="wizard-btn" data-back>Back</button>
+                <button type="submit" class="wizard-btn primary">Submit Professional Referral</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="wizard-success" id="pr-success">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h3>Thanks — the referral has been received.</h3>
+            <p>Our intake team will respond promptly with next steps and availability.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="direct-contact-box">
+        <h3>Prefer Not to Fill in a Form?</h3>
+        <p>Send us an email directly and we'll take it from there.</p>
+        <div class="contact-links">
+          <a href="mailto:divinelivingservices1@gmail.com">✉️ divinelivingservices1@gmail.com</a>
+        </div>
+        <p style="margin-top:14px;">Service area: Casey, Greater Dandenong, Monash, Wyndham &amp; Melton</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Divine Living Services Pty. Ltd.</h3>
+        <p>NDIS Support Coordination, Community Access, Daily Living and Nursing across Melbourne's South-Eastern and Western suburbs.</p>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Meet the Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-area.html">Service Area</a></li>
+          <li><a href="pricing.html">Pricing &amp; Funding</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="for-referrers.html">For Referrers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:divinelivingservices1@gmail.com">divinelivingservices1@gmail.com</a></li>
+          <li>Berwick, VIC 3806</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Divine Living Services Pty. Ltd. ABN 69 671 913 349</span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="feedback.html">Feedback &amp; Complaints</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="wizard.js" defer></script>
+</body>
+</html>
